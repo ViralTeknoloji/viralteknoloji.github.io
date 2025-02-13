@@ -24,9 +24,14 @@ a:hover {
  * Base structure
  */
 
-html,
-body {
+html {
   height: 100%;
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
+  display: flex;
+  flex-direction: column; /* Makes sure content stacks properly */
   background-color: #333;
 }
 
@@ -43,6 +48,9 @@ body {
 }
 
 .cover-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   max-width: 42em;
 }
 
@@ -106,5 +114,6 @@ body {
  * Footer
  */
 .mastfoot {
+  margin-top: auto;
   color: rgba(255, 255, 255, .5);
 }
